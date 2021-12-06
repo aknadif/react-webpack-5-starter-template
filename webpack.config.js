@@ -7,7 +7,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
   entry: path.resolve(__dirname, "src/index.js"),
   output: {
-    path: path.join(__dirname, "/dist"),
+    path: path.resolve(__dirname, "/dist"),
     filename: "[name].bundle.js",
   },
   module: {
@@ -27,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
+      template: path.resolve(__dirname, "src/templates/index.html"),
       filename: "index.html",
     }),
     new MiniCssExtractPlugin(),

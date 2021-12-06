@@ -20,9 +20,9 @@ module.exports = merge(common, {
       },
     ],
   },
+  plugins: [],
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
   },
-  plugins: [],
 });
